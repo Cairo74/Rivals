@@ -14,7 +14,7 @@ Liste os integrantes do grupo.
 
 - Nome 1: Cairo Rodrigues Rezende
 - Nome 2: Pedro Aguiar
-- Nome 3:
+- Nome 3: Ruan Montoya
 
 ## 3. Tipo de jogo
 
