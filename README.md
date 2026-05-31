@@ -1,73 +1,106 @@
-# Nome do Jogo
+# Rivals
 
-Projeto final da disciplina de Introdução a Algoritmos/Programação, desenvolvido com Python e Pygame.
+Projeto final da disciplina de Introducao a Algoritmos/Programacao, desenvolvido com Python e Pygame.
 
-Este repositório é um template para os grupos da disciplina. A proposta é começar com uma base funcional e evoluir o jogo ao longo do semestre.
+Rivals e um jogo de tiro competitivo local para dois jogadores. Os jogadores se enfrentam em uma arena, controlam personagens armados, desviam dos disparos do adversario e tentam acertar tiros para reduzir as vidas do oponente.
 
 ## Integrantes do grupo
 
-- Nome do integrante 1
-- Nome do integrante 2
-- Nome do integrante 3
-- Nome do integrante 4
+- Cairo Rodrigues Rezende
+- Pedro Aguiar
 
 ## Estrutura do projeto
 
-- `main.py`: ponto de entrada da aplicação.
-- `src/`: código-fonte principal do jogo (loop, regras, sprites e dados).
+- `main.py`: ponto de entrada da aplicacao.
+- `src/`: codigo-fonte principal do jogo.
+- `src/config.py`: configuracoes como tamanho da tela, cores, caminhos de arquivos, velocidade e valores gerais.
+- `src/jogo.py`: loop principal, controle de eventos, atualizacao dos objetos e regras da partida.
+- `src/sprites.py`: funcoes auxiliares para carregar e recortar sprites.
+- `src/dados.py`: funcoes para carregar e salvar dados persistentes.
+- `src/funcoes.py`: funcoes de apoio para pontuacao, colisao, limites e dano.
 - `assets/`: imagens, fontes e sons.
-- `data/`: arquivos persistentes (recorde/ranking).
-- `tests/`: testes unitários com `pytest`.
-- `docs/`: documentação do projeto, incluindo proposta inicial.
+- `data/`: arquivos persistentes, como recorde ou dados de progresso.
+- `tests/`: testes unitarios com `pytest`.
+- `docs/`: documentacao do projeto, incluindo a proposta inicial.
 
-## Descrição do jogo
+## Descricao do jogo
 
-Descreva brevemente a ideia principal do jogo.
+Rivals coloca dois jogadores na mesma tela, cada um iniciando em um lado diferente da arena. Durante a partida, os jogadores precisam se movimentar, mirar na direcao em que estao virados e disparar contra o adversario.
 
-Exemplo:
-
-> O jogo consiste em controlar um personagem que deve coletar moedas e evitar obstáculos. O jogador ganha pontos ao coletar itens e perde vidas ao colidir com obstáculos. A partida termina quando o tempo acaba ou quando o jogador perde todas as vidas.
+A tela exibe a arena, os personagens, os tiros em movimento e a quantidade de vidas restante de cada jogador. O desafio principal e atacar o oponente sem ser atingido.
 
 ## Objetivo do jogador
 
-Explique o que o jogador precisa fazer para vencer ou avançar no jogo.
-
-Exemplo:
-
-> O objetivo é coletar a maior quantidade possível de itens antes que o tempo acabe, evitando colisões com os obstáculos.
+O objetivo de cada jogador e acertar tiros no adversario ate fazer com que ele perca todas as suas vidas. Vence quem conseguir reduzir as 3 vidas do oponente a 0 primeiro.
 
 ## Regras do jogo
 
-Liste as principais regras do jogo.
+- Cada jogador comeca a partida com 3 vidas.
+- Cada tiro que acerta o adversario remove 1 vida dele.
+- Os jogadores podem se movimentar pela arena para atacar e desviar dos tiros.
+- Os tiros seguem em linha reta na direcao em que o jogador esta virado.
+- Os personagens nao podem sair dos limites da arena.
+- A partida termina quando um dos jogadores fica com 0 vidas.
+- Ao fim da partida, o jogo mostra qual jogador venceu.
 
-Exemplo:
+## Condicoes de vitoria e derrota
 
-- O jogador se movimenta usando as setas do teclado.
-- Cada item coletado aumenta a pontuação.
-- Colidir com um obstáculo reduz a quantidade de vidas.
-- A partida termina quando o jogador perde todas as vidas ou quando o tempo acaba.
+Um jogador vence quando faz o adversario perder todas as 3 vidas. Um jogador perde quando sua propria quantidade de vidas chega a 0. Nesse momento, a partida e encerrada.
+
+## Elementos do jogo
+
+- Jogador 1: personagem que inicia no lado esquerdo da arena.
+- Jogador 2: personagem que inicia no lado direito da arena.
+- Arena: espaco onde os jogadores se movimentam e se enfrentam.
+- Tiros: projeteis disparados pelos jogadores, capazes de colidir com o adversario.
+- Vidas: indicador de resistencia dos jogadores durante a partida.
+- Limites da arena: impedem que os jogadores saiam da tela.
 
 ## Controles
 
-Informe as teclas ou comandos utilizados no jogo.
-
-Exemplo:
-
-- Seta para cima: mover para cima
-- Seta para baixo: mover para baixo
-- Seta para esquerda: mover para esquerda
-- Seta para direita: mover para direita
-- Espaço: realizar ação
+- W, A, S, D: mover o Jogador 1
+- E: atirar com o Jogador 1
+- Setas do teclado: mover o Jogador 2
+- P: atirar com o Jogador 2
 - ESC: sair do jogo
+
+## Escopo minimo
+
+A versao minima do jogo deve conter:
+
+- dois jogadores na mesma tela;
+- movimentacao por teclado;
+- sistema de tiros;
+- colisao entre tiro e adversario;
+- 3 vidas para cada jogador;
+- fim de jogo indicando o vencedor.
+
+## Possiveis melhorias
+
+- Criar uma tela inicial para comecar a partida.
+- Adicionar sons para tiros, acertos e fim de jogo.
+- Adicionar obstaculos na arena para os jogadores se protegerem.
+- Criar diferentes personagens ou cores para personalizacao.
+- Adicionar menu de pausa e opcao de reiniciar a partida.
 
 ## Como executar o projeto
 
-### 1. Clonar o repositório
+### 1. Clonar o repositorio
 
 ```bash
 git clone LINK_DO_REPOSITORIO
-cd NOME_DA_PASTA
+cd Rivals
+```
+
+### 2. Instalar as dependencias
+
+```bash
 pip install -r requirements.txt
+```
+
+### 3. Executar o jogo
+
+```bash
 python main.py
 ```
 
@@ -77,15 +110,12 @@ python main.py
 python -m pytest
 ```
 
-## Checklist mínimo para entrega
+## Tecnologias utilizadas
 
-- Preencher este README com nome final, descrição real, regras e controles do jogo.
-- Atualizar `docs/proposta.MD` com a proposta do grupo.
-- Garantir que o jogo executa com `python main.py`.
-- Garantir que os testes passam com `pytest`.
+- Python
+- Pygame
+- Pytest
 
-## Observações para os alunos
+## Documentacao
 
-- Mantenham o código organizado em módulos pequenos e com responsabilidade clara.
-- Comentem partes importantes da lógica, principalmente regras do jogo.
-- Registrem decisões técnicas no README do grupo ao longo do desenvolvimento.
+A proposta inicial do projeto esta em `docs/proposta.MD`.
