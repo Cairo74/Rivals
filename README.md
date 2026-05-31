@@ -24,7 +24,7 @@ Rivals e um jogo de tiro competitivo local para dois jogadores. Os jogadores se 
 - `tests/`: testes unitarios com `pytest`.
 - `docs/`: documentacao do projeto, incluindo a proposta inicial.
 
-## Descricao do jogo
+## Descrição do jogo
 
 Rivals coloca dois jogadores na mesma tela, cada um iniciando em um lado diferente da arena. Durante a partida, os jogadores precisam se movimentar, mirar na direcao em que estao virados e disparar contra o adversario.
 
