@@ -8,6 +8,7 @@ Rivals e um jogo de tiro competitivo local para dois jogadores. Os jogadores se 
 
 - Cairo Rodrigues Rezende
 - Pedro Aguiar
+- Ruan Montoya
 
 ## Estrutura do projeto
 
@@ -23,7 +24,7 @@ Rivals e um jogo de tiro competitivo local para dois jogadores. Os jogadores se 
 - `tests/`: testes unitarios com `pytest`.
 - `docs/`: documentacao do projeto, incluindo a proposta inicial.
 
-## Descricao do jogo
+## Descrição do jogo
 
 Rivals coloca dois jogadores na mesma tela, cada um iniciando em um lado diferente da arena. Durante a partida, os jogadores precisam se movimentar, mirar na direcao em que estao virados e disparar contra o adversario.
 
@@ -49,8 +50,8 @@ Um jogador vence quando faz o adversario perder todas as 3 vidas. Um jogador per
 
 ## Elementos do jogo
 
-- Jogador 1: personagem que inicia no lado esquerdo da arena.
-- Jogador 2: personagem que inicia no lado direito da arena.
+- Jogador 1: personagem que inicia na parte de cima da arena.
+- Jogador 2: personagem que inicia na parte de baixo da arena.
 - Arena: espaco onde os jogadores se movimentam e se enfrentam.
 - Tiros: projeteis disparados pelos jogadores, capazes de colidir com o adversario.
 - Vidas: indicador de resistencia dos jogadores durante a partida.

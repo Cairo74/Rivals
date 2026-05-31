@@ -14,7 +14,7 @@ Liste os integrantes do grupo.
 
 - Nome 1: Cairo Rodrigues Rezende
 - Nome 2: Pedro Aguiar
-- Nome 3:
+- Nome 3: Ruan Montoya
 
 ## 3. Tipo de jogo
 
@@ -66,7 +66,7 @@ Descreva os principais elementos que farão parte do jogo.
 
 Descrição:
 
-> O jogo terá dois personagens principais. O Jogador 1 começará no lado esquerdo da arena e será controlado pelas teclas WASD. O Jogador 2 começará no lado direito da arena e será controlado pelas setas do teclado.
+> O jogo terá dois personagens principais. O Jogador 1 começará na parte de cima da arena e será controlado pelas teclas WASD. O Jogador 2 começará na parte de cima da arena e será controlado pelas setas do teclado.
 
 ## Obstáculos, inimigos ou desafios
 
